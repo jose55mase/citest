@@ -5,7 +5,12 @@ jobs:
     runs-on: self-hosted
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v1
-      - name: Decrypt large secret
+      - name: check
+        uses: actions/checkout@v1
+      
+      - name: Build
+        run: |
+          npm install
+          
        
         
