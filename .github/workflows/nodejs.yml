@@ -9,7 +9,7 @@ jobs:
       - name: Decrypt large secret
         run: ./.github/scripts/decrypt_secret.sh
         env:
-          LARGE_SECRET_PASSPHRASE: $
+          joxeci: $
       # Este comando es solo un ejemplo para mostrar cómo se imprime tu secreto.
       # Asegúrate de eliminar las declaraciones impresas de tus secretos. GitHub 
       # no oculta los secretos que usan esta solución.
