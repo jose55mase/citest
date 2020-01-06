@@ -5,13 +5,8 @@ jobs:
     runs-on: self-hosted
     name: A job to say hello
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: actions/hello-world-docker-action@v1
-      with:
-        who-to-greet: 'Mona the Octocat'
-    # Usa los resultados del paso `hello`
-    - name: Get the output time
+          
+    - name: Iniciar Proyecto
       run: | 
         mkdir EstoESunArchivo
         cd EstoESunArchivo
