@@ -16,5 +16,6 @@ jobs:
         mkdir EstoESunArchivo
         cd EstoESunArchivo
         echo "gato" > text.txt
-        ls
         pwd
+        ls
+        
