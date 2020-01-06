@@ -7,12 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Decrypt large secret
-        run: ./.github/scripts/decrypt_secret.sh
-        env:
-          joxeci: $
-      # Este comando es solo un ejemplo para mostrar cómo se imprime tu secreto.
-      # Asegúrate de eliminar las declaraciones impresas de tus secretos. GitHub 
-      # no oculta los secretos que usan esta solución.
-      - name: Test printing your secret (Elimina este paso en la producción)
-        run: cat $HOME/secrets/my_secret.json
+        with:
+          GITHUB_TOKEN: ${{ secrets.joxeci }}
+          BRANCH: gh-pages
+          FOLDER: dist
         
