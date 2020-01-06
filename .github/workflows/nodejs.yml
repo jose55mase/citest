@@ -11,9 +11,9 @@ jobs:
       - name: Build
         with: 
           BRANCH: master
-          run: |
-            npm install
-            node index.js
-          
+        run: |
+          npm install
+          node index.js
+        
        
         
