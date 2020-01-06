@@ -12,6 +12,7 @@ jobs:
         who-to-greet: 'Mona the Octocat'
     # Usa los resultados del paso `hello`
     - name: Get the output time
-      run: mkdir EstoESunArchivo
-      run: cd EstoESunArchivo
-      run: echo "gato" > text.txt
+      run: | 
+        mkdir EstoESunArchivo
+        cd EstoESunArchivo
+        echo "gato" > text.txt
