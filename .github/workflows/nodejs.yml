@@ -1,26 +1,15 @@
-name: Node CI
-
 on: [push]
 
 jobs:
-  build:
-
+  hello_world_job:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
+    name: A job to say hello
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Hello world action step
+      id: hello
+      uses: actions/hello-world-docker-action@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm ci
-        npm run build --if-present
-        npm test
-      env:
-        CI: true
+        who-to-greet: 'Mona the Octocat'
+    # Usa los resultados del paso `hello`
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
