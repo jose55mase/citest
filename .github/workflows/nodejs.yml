@@ -7,8 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Decrypt large secret
-        with:
-          GITHUB_TOKEN: ${{ secrets.joxeci }}
-          BRANCH: gh-pages
-          FOLDER: dist
+       
         
