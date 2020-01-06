@@ -5,14 +5,11 @@ jobs:
     runs-on: self-hosted
     name: A job to say hello
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: actions/hello-world-docker-action@v1
+          
+    - name: Iniciar Proyecto
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Usa los resultados del paso `hello`
-    - name: Get the output time
-      run: | 
-        npm ci
-        npm run build --if-present
+        GITHUB_TOKEN: ${{ secrets.joxeci }}
+        BRANCH: master
+        FOLDER: dist
         
